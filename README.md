@@ -8,3 +8,38 @@
 6. `<input type="radio">` `<input type="checkbox">` 右边的文本，不需要加空格，例如`<input type="radio" />男`；
 7. `<input />` `<img />` 等空元素，`/`统一规范，前面要加个空格
 8. `<input type="checkbox">` GET 请求 `languages=Java&languages=C++` POST 请求 `languages=Java&languages=C++` 相同的name多个value
+9. `input` `select` `textarea` 尽量都要设置 `name`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>个人资料</title>
+</head>
+<body>
+  <form action="/profile" method="post" enctype="multipart/form-data">
+    <div>姓名：<input type="text" name="name" /></div>
+    <div>性别：<input type="radio" name="gender" value="男" />男
+               <input type="radio" name="gender" value="女" />女
+    </div>
+    <div>语言：<input type="checkbox" name="languages" value="汉语" />汉语
+               <input type="checkbox" name="languages" value="英语" />英语
+    </div>
+    <div>生日：<input type="date" name="birthday" /></div>
+    <div>颜色：<input type="color" name="color" /></div>
+    <div>范围：<input type="range" name="range" min="0" value="0" max="100" /></div>
+    <div>头像：<input type="file" name="avatar" /></div>
+    <div>学校：<select name="school">
+                 <option value="">请选择</option>
+                 <option value="小学">小学</option>
+                 <option value="初中">初中</option>
+                 <option value="高中">高中</option>
+               </select>
+    </div>
+    <div>简介：<textarea name="intro"></textarea></div>
+    <div>照片：<input type="file" name="photos" multiple /></div>
+    <div><button type="submit">保存</button></div>
+  </form>
+</body>
+</html>
+```
