@@ -7,4 +7,4 @@
 5. 要文件上传，form 需要 `method="post" enctype="multipart/form-data"`
 6. `<input type="radio">` `<input type="checkbox">` 右边的文本，不需要加空格，例如`<input type="radio" />男`；
 7. `<input />` `<img />` 等空元素，`/`统一规范，前面要加个空格
-8. `<input type="checkbox">` GET 请求 `languages=Java&languages=C++` POST 请求 `languages=Java&languages=C++`
+8. `<input type="checkbox">` GET 请求 `languages=Java&languages=C++` POST 请求 `languages=Java&languages=C++` 相同的name多个value
