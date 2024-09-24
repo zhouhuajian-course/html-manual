@@ -55,4 +55,16 @@
   关联标签的表单控件称为这个标签的已关联标签的控件。一个 input 可以与多个标签相关联。
   点击或者轻触（tap）与表单控件相关联的 <label> 也可以触发关联控件的 click 事件。
 ```
-11. `<input type="date">`，它的 value `值	按照 YYYY-MM-DD 格式化过的代表日期的字符串，或者为空字符串`，`有一点需要注意的是，在格式方面显示的日期与实际的 value 不一样——显示的日期格式取决于用户浏览器的区域设定，而经解析的 value 的格式始终为 yyyy-mm-dd。`，`可以通过 JavaScript 代码获取和设置 HTMLInputElement 的 value 和 valueAsNumber 属性`，`valueAsNumber` 是 `JavaScript` 的时间戳，例如 `1496275200000` (ms)，不能设置其他格式的值，不然会变成 空字符串。
+11. `<input type="date">`，它的 value `值	按照 YYYY-MM-DD 格式化过的代表日期的字符串，或者为空字符串`，`有一点需要注意的是，在格式方面显示的日期与实际的 value 不一样——显示的日期格式取决于用户浏览器的区域设定，而经解析的 value 的格式始终为 yyyy-mm-dd。`，`可以通过 JavaScript 代码获取和设置 HTMLInputElement 的 value 和 valueAsNumber 属性`，`valueAsNumber` 是 `JavaScript` 的时间戳，例如 `1496275200000` (ms)，不能设置其他格式的值，不然会变成 空字符串；默认值是 空字符串。
+```text
+<input type="date"> 默认 value 为空字符串 默认格式 需要是 yyyy-MM-dd 设置 yyyy/MM/dd无法设置成功，value会变空字符串
+> $("input[type=\"date\"]").value
+  ''
+> $("input[type=\"date\"]").value = "2024-10-01"
+  '2024-10-01'
+> $("input[type=\"date\"]").value = "2024/10/01"
+  VM1908:1 The specified value "2024/10/01" does not conform to the required format, "yyyy-MM-dd".
+  '2024/10/01'
+> $("input[type=\"date\"]").value
+  ''
+```
