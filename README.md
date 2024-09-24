@@ -55,3 +55,4 @@
   关联标签的表单控件称为这个标签的已关联标签的控件。一个 input 可以与多个标签相关联。
   点击或者轻触（tap）与表单控件相关联的 <label> 也可以触发关联控件的 click 事件。
 ```
+11. `<input type="date">`，它的 value `值	按照 YYYY-MM-DD 格式化过的代表日期的字符串，或者为空字符串`，`有一点需要注意的是，在格式方面显示的日期与实际的 value 不一样——显示的日期格式取决于用户浏览器的区域设定，而经解析的 value 的格式始终为 yyyy-mm-dd。`，`可以通过 JavaScript 代码获取和设置 HTMLInputElement 的 value 和 valueAsNumber 属性`，`valueAsNumber` 是 `JavaScript` 的时间戳，例如 `1496275200000` (ms)，不能设置其他格式的值，不然会变成 空字符串。
