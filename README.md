@@ -68,3 +68,5 @@
 > $("input[type=\"date\"]").value
   ''
 ```
+12. `<textarea></textarea>` 文本域的 `rows="5"`，表示高度为 5 行文本的高度；
+13. `<canvas></canvas>` 画布 是行内元素，`width="300" height="300"` 可以设置 画布宽高，不同 `<img />`，画布需要闭合标签；
